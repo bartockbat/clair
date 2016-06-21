@@ -46,7 +46,8 @@ func (detector *RedhatReleaseNamespaceDetector) Detect(data map[string][]byte) *
 
 		r := redhatReleaseRegexp.FindStringSubmatch(string(f))
 		if len(r) == 4 {
-			return &database.Namespace{Name: strings.ToLower(r[1]) + ":" + r[3]}
+			//return &database.Namespace{Name: strings.ToLower(r[1]) + ":" + r[3]}
+			return &database.Namespace{Name: "centos:" + r[3]}
 		}
 	}
 
