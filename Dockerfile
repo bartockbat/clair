@@ -29,6 +29,6 @@ EXPOSE 6060 6061
 ADD .   /go/src/github.com/coreos/clair/
 WORKDIR /go/src/github.com/coreos/clair/
 
-RUN go install -v github.com/coreos/clair/cmd/clair
+RUN go install -v github.com/bartockbat/cmd/clair
 
 ENTRYPOINT ["clair"]
